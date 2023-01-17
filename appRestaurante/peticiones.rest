@@ -1,0 +1,55 @@
+GET http://localhost:3000/api/comensales
+
+###
+POST http://localhost:3000/api/comensales
+Content-Type: application/json
+
+{
+    "nombre": "Roberto",
+    "apellidos": "González Prada",
+    "telefono": "9819919892",
+    "primera_vez": true,
+    "alergias": [],
+    "num_visitas": 1
+}
+
+###
+PUT http://localhost:3000/api/comensales/63582fd7a3af40b7876725c3
+Content-Type: application/json
+
+{
+    "apellidos": "Romero López",
+    "num_visitas": 3,
+    "alergias": ["mostaza"]
+}
+
+###
+DELETE http://localhost:3000/api/comensales/63582fd7a3af40b7876725c3
+
+
+
+###
+GET http://localhost:3000/api/mesas
+
+###
+POST http://localhost:3000/api/mesas
+Content-Type: application/json
+
+{
+    "numero": 3,
+    "tipo": "cuadrada",
+    "ventana": true,    
+    "sala": "bar"
+}
+
+###
+POST http://localhost:3000/api/mesas/agregar
+Content-Type: application/json
+
+{
+    "comensalId": "6359751ff5b375c195889a7a",
+    "mesaId": "63597570f5b375c195889a80"
+}
+
+###
+GET http://localhost:3000/api/comensales/misma-mesa/63597539f5b375c195889a7c
